@@ -27,6 +27,13 @@ To remove the folder form the staged state: git remove --staged <filename>
 
 To see all the commit done: git log
 
+To go to the previous state of the folder before commiting something: git checkout <commit id>
+	the head position changes to the previos state from the recent commit
+
+To go back to the commited state: git checkout main
+
+To delete to changes which are made while you were in the previous state: git checkout -f main
+
 To undo the commit, get the commit id and write the cmd: git reset < commit id >
 
 When you do't want to commit the file but save it somewhere to use it later, every file which are in the staged state will be stashed: git stash
