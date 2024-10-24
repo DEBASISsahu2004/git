@@ -72,5 +72,5 @@ To publish your local branch to remote repo: git push --set-upstream orgin <bran
 	or git push -u orgin <branchName>
 
 	git pull - to pull from remote branch 
-	git push - to push to remote branch
+	git push - to push to the branch
 
