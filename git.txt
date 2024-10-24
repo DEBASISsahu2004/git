@@ -8,6 +8,8 @@ git config --global user.email "your email"
 
 To initialise a folder to git: git init
 
+To change the name of master branch to main: git branch -M main
+
 To clone a repo: git clone " link of the repo "
 
 To get the status of the repo: git status
@@ -33,6 +35,10 @@ To go to the previous state of the folder before commiting something: git checko
 To go back to the commited state: git checkout main
 
 To delete to changes which are made while you were in the previous state: git checkout -f main
+
+To link the local repo to the remote origin: git remote add origin(can be any other name) <repo link>
+
+To push the local commits to github: git push -u origin main
 
 To undo the commit, get the commit id and write the cmd: git reset < commit id >
 
