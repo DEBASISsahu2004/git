@@ -40,7 +40,18 @@ To link the local repo to the remote origin: git remote add origin(can be any ot
 
 To push the local commits to github: git push -u origin main
 
+
+
 To undo the commit, get the commit id and write the cmd: git reset < commit id >
 
 When you do't want to commit the file but save it somewhere to use it later, every file which are in the staged state will be stashed: git stash
 
+
+
+To create a branch: git branch <branchname>
+
+To move the head to the branch: git checkout <branchname>
+
+To create and move to the branch(combination of above 2): git checkout -b <branchname>
+
+While creating a branch make sure to move the head to main branch i.e. main by using the checkout or use: git branch <newBanchName> <sourceBranchName>
