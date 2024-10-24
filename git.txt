@@ -55,3 +55,4 @@ To move the head to the branch: git checkout <branchname>
 To create and move to the branch(combination of above 2): git checkout -b <branchname>
 
 While creating a branch make sure to move the head to main branch i.e. main by using the checkout or use: git branch <newBanchName> <sourceBranchName>
+
