@@ -66,3 +66,11 @@ To pull changes from the main branch into your current branch (branch1), you can
 	3. Alternatively, you can use a single command to pull and merge the changes: git pull origin main
 
 when i have done some changes in branch1 and i have added and commited the changes in branch1 i need to push it in my branch1 using (git push -u origin branch1) then move the head to main (git checkout main) then merge the banch1 updates to main i.e. the changes that are done in branch1 wil be reflected in main (git merge branch1), now both the branch has same content so now we need to push the changes to the repo from main branch (git push -u orgin main).
+
+
+To publish your local branch to remote repo: git push --set-upstream orgin <branchName>
+	or git push -u orgin <branchName>
+
+	git pull - to pull from remote branch 
+	git push - to push to remote branch
+
