@@ -56,3 +56,11 @@ To create and move to the branch(combination of above 2): git checkout -b <branc
 
 While creating a branch make sure to move the head to main branch i.e. main by using the checkout or use: git branch <newBanchName> <sourceBranchName>
 
+To list all branches and see which branch you are currently on: git branch
+	The current branch will be highlighted with an asterisk (*).
+
+To pull changes from the main branch into your current branch (branch1), you can use the following commands:
+	1. Fetch the latest changes from the remote repository: git fetch origin
+	2. Merge the main branch into your current branch (branch1): git merge origin/main
+
+	3. Alternatively, you can use a single command to pull and merge the changes: git pull origin main
