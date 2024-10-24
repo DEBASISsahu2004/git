@@ -6,6 +6,10 @@ To config your git to work with yor name and email
 git config --global user.name "your name"
 git config --global user.email "your email"
 
+To see the user name or email: 
+git config --global user.name // git config user.name
+git config --global user.email // git config user.email
+
 To initialise a folder to git: git init
 
 To change the name of master branch to main: git branch -M main
