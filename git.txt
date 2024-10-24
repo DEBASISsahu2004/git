@@ -71,6 +71,6 @@ when i have done some changes in branch1 and i have added and commited the chang
 To publish your local branch to remote repo: git push --set-upstream orgin <branchName>
 	or git push -u orgin <branchName>
 
+	git push - to push to the branch (works on any branch)
 	git pull - to pull from remote branch 
-	git push - to push to the branch
 
