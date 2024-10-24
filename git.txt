@@ -46,7 +46,7 @@ To undo the commit, get the commit id and write the cmd: git reset < commit id >
 
 When you do't want to commit the file but save it somewhere to use it later, every file which are in the staged state will be stashed: git stash
 
-
+------------------------- Branching -------------------------
 
 To create a branch: git branch <branchname>
 
