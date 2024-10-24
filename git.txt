@@ -1,0 +1,33 @@
+git commands
+
+To check the version or to check git is installed: git -v // git --version
+
+To config your git to work with yor name and email
+git config --global user.name "your name"
+git config --global user.email "your email"
+
+To initialise a folder to git: git init
+
+To clone a repo: git clone " link of the repo "
+
+To get the status of the repo: git status
+
+types of status:
+	untracked: when you create a new file
+	modified: when you modify a existing file
+	staged: when it is added after modified
+	unmodified: not modified
+
+To add new or changed files in working directory to the Git staging area: git add <filenames with space>
+	git add . ( add all )
+
+To commit the changed in the local branch: git commit -m ""
+
+To remove the folder form the staged state: git remove --staged <filename>
+
+To see all the commit done: git log
+
+To undo the commit, get the commit id and write the cmd: git reset < commit id >
+
+When you do't want to commit the file but save it somewhere to use it later, every file which are in the staged state will be stashed: git stash
+
