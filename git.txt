@@ -1,80 +1,114 @@
-git commands
+--------------------- git commands ------------------------
 
-To check the version or to check git is installed: git -v // git --version
+To check version of git(if it is shown then git is installed successfully):
+git -v git --version
 
-To config your git to work with yor name and email
+To onfig your git to work with your name and email:
 git config --global user.name "your name"
 git config --global user.email "your email"
 
-To see the user name or email: 
+To see the user name or email:
 git config --global user.name // git config user.name
 git config --global user.email // git config user.email
 
-To initialise a folder to git: git init
+To initialise a folder as git folder(adds .git folder):
+git init
 
-To change the name of master branch to main: git branch -M main
+To change the name of master branch to main:
+git branch -M main
 
-To clone a repo: git clone " link of the repo "
+To clone a repo:
+git clone link-of-repo
 
-To get the status of the repo: git status
+To get the status of the repo:
+git status
 
-types of status:
+Types of status:
 	untracked: when you create a new file
 	modified: when you modify a existing file
 	staged: when it is added after modified
 	unmodified: not modified
 
-To add new or changed files in working directory to the Git staging area: git add <filenames with space>
-	git add . ( add all )
+To add new/changed files to the Git staging area:
+git add <filenames with space>
+git add . ( add all )
 
-To commit the changed in the local branch: git commit -m ""
+To commit the changed in the local branch: 
+git commit -m commit-message(enclosed with "")
 
-To remove the folder form the staged state: git remove --staged <filename>
+To remove a file form the staged state:
+git remove --staged file-name
 
-To see all the commit done: git log
+To see all the commit done:
+git log
 
-To go to the previous state of the folder before commiting something: git checkout <commit id>
-	the head position changes to the previos state from the recent commit
+To go to the previous state of the folder before commiting something(the head position changes to the previos state from the recent commit):
+git checkout <commit id>
 
-To go back to the commited state: git checkout main
+To move through branchs:
+git checkout branch-name
 
-To delete to changes which are made while you were in the previous state: git checkout -f main
+To delete to changes which are made while you were in the previous state:
+git checkout -f main
 
-To link the local repo to the remote origin: git remote add origin(can be any other name) <repo link>
+To link the local repo with remote origin:
+git remote add origin(can be any other name) repo-link
 
-To push the local commits to github: git push -u origin main
+To push the local commits to github:
+git push -u origin main
 
 
-
-To undo the commit, get the commit id and write the cmd: git reset < commit id >
+To undo the commit, get the commit id and write the cmd:
+git reset < commit id >
 
 When you do't want to commit the file but save it somewhere to use it later, every file which are in the staged state will be stashed: git stash
 
 ------------------------- Branching -------------------------
 
-To create a branch: git branch <branchname>
+To create a branch(branch is created from the place where head points):
+git branch branch-name
 
-To move the head to the branch: git checkout <branchname>
+To create and move to the branch:
+git checkout -b <branchname>
 
-To create and move to the branch(combination of above 2): git checkout -b <branchname>
+While creating a branch make sure to move the head to main branch i.e. main by using the checkout or use: 
+git branch <newBanchName> <sourceBranchName>
 
-While creating a branch make sure to move the head to main branch i.e. main by using the checkout or use: git branch <newBanchName> <sourceBranchName>
-
-To list all branches and see which branch you are currently on: git branch
+To list all branches and see which branch you are currently on:
+git branch
 	The current branch will be highlighted with an asterisk (*).
 
 To pull changes from the main branch into your current branch (branch1), you can use the following commands:
-	1. Fetch the latest changes from the remote repository: git fetch origin
-	2. Merge the main branch into your current branch (branch1): git merge origin/main
+	1. Fetch the latest changes from the remote repository:
+		git fetch origin main
+	2. Merge the main branch into your current branch (branch1):
+		git merge origin/main
 
 	3. Alternatively, you can use a single command to pull and merge the changes: git pull origin main
 
 when i have done some changes in branch1 and i have added and commited the changes in branch1 i need to push it in my branch1 using (git push -u origin branch1) then move the head to main (git checkout main) then merge the banch1 updates to main i.e. the changes that are done in branch1 wil be reflected in main (git merge branch1), now both the branch has same content so now we need to push the changes to the repo from main branch (git push -u orgin main).
 
-
-To publish your local branch to remote repo: git push --set-upstream orgin <branchName>
-	or git push -u orgin <branchName>
+To publish your local branch to remote repo:
+	git push --set-upstream orgin <branchName> \\ git push -u orgin <branchName>
 
 	git push - to push to the branch (works on any branch)
 	git pull - to pull from remote branch 
 
+List Remote Repositories
+To list all the remote repositories configured for your local repository, use the: git remote -v
+
+To remove the remote repo configuredin local: git remote remove origin
+
+to delete a branch from local: git branch -d branch-name
+to force delete git branch -D branch-name
+
+to delete branch from remote: git push origin --delete branch-name
+
+to see the branch local: git branch
+to see the branch remote: git branch -r
+
+to rename the remote repo link name:
+git remote rename <oldname> <newname>
+
+to check remote repo link name:
+git remote -v
